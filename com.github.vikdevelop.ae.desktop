@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Adobe Express
+Icon=com.github.vikdevelop.ae
+Exec=run.sh
+Categories=Internet
+Type=Application
+Terminal=false

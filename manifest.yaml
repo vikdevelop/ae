@@ -1,0 +1,45 @@
+app-id: com.github.vikdevelop.ae
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+base: org.electronjs.Electron2.BaseApp
+base-version: "21.08"
+command: run.sh
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node16
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --share=network
+  - --filesystem=xdg-download
+  - --device=dri
+build-options:
+  append-path: /usr/lib/sdk/node16/bin
+  env:
+    NPM_CONFIG_LOGLEVEL: info
+modules:
+  - name: mso
+    buildsystem: simple
+    build-options:
+        env:
+          XDG_CACHE_HOME: /run/build/ae/flatpak-node/cache
+        build-args:
+        - --share=network
+    build-commands:
+    - yarn
+    - mkdir build
+    - yarn electron-packager ./ ae --platform=linux --arch=x64 --electron-version=15.4.1 --out=build_electron/
+    - mkdir /app/main
+    - cp -R build_electron/ae-linux-x64/* /app/main
+    - install -D -t /app/bin run.sh
+    - install -D -t /app/share/applications com.github.vikdevelop.ae.desktop
+    - install -D -t /app/share/metainfo com.github.vikdevelop.ae.metainfo.xml
+    - install -D -t /app/share/icons/hicolor/128x128/apps resources/com.github.vikdevelop.ae.png
+    sources:
+      - type: dir
+        path: /mnt/sda1/General/apps/ms-office
+      - type: script
+        dest-filename: run.sh
+        commands:
+          - zypak-wrapper.sh /app/main/ae "$@"

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>com.github.vikdevelop.ae</id>
+    <launchable type="desktop-id">com.github.vikdevelop.ae.desktop</launchable>
+    <name>Adobe Express</name>
+    <summary>Photography online editor by Adobe</summary>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>MIT</project_license>
+
+    <description>
+        <p>Photography online editor by Adobe.</p>
+        <p>NOTE: This is a wrapper of Adobe Express webapp.</p>
+    </description>
+
+    <url type="homepage">https://express.adobe.com/sp</url>
+
+    <screenshots>
+        <screenshot type="default">
+            <image>https://raw.githubusercontent.com/vikdevelop/penpot-electron/main/screnshots/penpot_home.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/vikdevelop/penpot-electron/main/screnshots/penpot_login.png</image>
+        </screenshot>
+    </screenshots>
+
+    <content_rating type="oars-1.1"/>
+
+    <categories>
+        <category>Internet</category>
+    </categories>
+
+    <releases>
+        <release version="1.0" date="2022-04-23">
+        </release>
+  </releases>
+</component>
