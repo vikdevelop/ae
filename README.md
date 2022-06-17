@@ -6,7 +6,7 @@ This is a super photo online editor by Adobe. It's called Adobe Express. Create 
 ### Installation
 For build and install this app, you will need installed `flatpak-builder` and from flathub `org.freedesktop.Sdk org.freedesktop.Sdk.Extension.node16 org.electronjs.Electron2.BaseApp` and use this command:
 ```bash
-sh -c "$(wget https://raw.githubusercontent.com/vikdevelop/ae/main/install.sh -0 -)"
+sh -c "$(wget https://raw.githubusercontent.com/vikdevelop/ae/main/install.sh)"
 ```
 ### License
 This program is avaible under [MIT](https://github.com/vikdevelop/ae/blob/main/LICENSE) license.
