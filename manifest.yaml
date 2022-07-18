@@ -37,8 +37,7 @@ modules:
     - install -D -t /app/share/metainfo com.github.vikdevelop.ae.metainfo.xml
     - install -D -t /app/share/icons/hicolor/128x128/apps resources/com.github.vikdevelop.ae.png
     sources:
-      - type: dir
-        path: /mnt/sda1/General/apps/ms-office
+      - # I will add download source
       - type: script
         dest-filename: run.sh
         commands:
