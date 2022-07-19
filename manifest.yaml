@@ -37,7 +37,9 @@ modules:
     - install -D -t /app/share/metainfo com.github.vikdevelop.ae.metainfo.xml
     - install -D -t /app/share/icons/hicolor/128x128/apps resources/com.github.vikdevelop.ae.png
     sources:
-      - # I will add download source
+      - type: archive
+        url: https://github.com/vikdevelop/ae/archive/refs/tags/0.1.tar.gz
+        sha256: 7ae6a6ee57b52fdf47cfa18eaf9cf60134828a97f5d79b199b38c263fc1a1038
       - type: script
         dest-filename: run.sh
         commands:
